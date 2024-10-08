@@ -94,3 +94,8 @@ as understood, the files were first were combined in khdb.txt(here nope.txt was 
 later on again doing compose with bro beo khdb we got, bro beo concatinated in compose, then the contents of khbd. 
 ![image](https://github.com/user-attachments/assets/37ae4ead-5cbb-4c2b-a698-2fac6d991d5e)
 
+Modify the Access Control List of the object you just created so that it's readable by everyone:
+```gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png```
+
+
+
