@@ -88,3 +88,9 @@ Operation completed over 1 objects.
 student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$
 
 ```
+as understood, the files were first were combined in khdb.txt(here nope.txt was also copyied to the bucket to recreate what happend with khbd.txt) first, loosing all it's contents, 
+![image](https://github.com/user-attachments/assets/897a0148-ceb4-4445-bddd-34a427764d70)
+
+later on again doing compose with bro beo khdb we got, bro beo concatinated in compose, then the contents of khbd. 
+![image](https://github.com/user-attachments/assets/37ae4ead-5cbb-4c2b-a698-2fac6d991d5e)
+
