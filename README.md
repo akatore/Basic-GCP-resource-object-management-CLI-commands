@@ -63,3 +63,28 @@ Operation completed over 1 objects/91.0 B.
 student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$
 ```
 ![image](https://github.com/user-attachments/assets/38d69ce9-896a-4e1a-b91a-27c5da7f6a4d)
+
+```
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$ gsutil compose gs://DEVSHELL_PROJECT_ID/bro.txt gs://DEVSHELL_PROJECT_ID/beo.txt gs://DEVSHELL_PROJECT_ID/khdb.txt 
+BadRequestException: 400 Invalid bucket name: 'DEVSHELL_PROJECT_ID'
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$ gsutil compose gs://$DEVSHELL_PROJECT_ID/bro.txt gs://$DEVSHELL_PROJECT_ID/beo.txt gs://$DEVSHELL_PROJECT_ID/khdb.txt                  
+Composing gs://qwiklabs-gcp-02-8288bf2664c0/khdb.txt from 2 component object(s).
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$ gsutil compose gs://$DEVSHELL_PROJECT_ID/bro.txt gs://$DEVSHELL_PROJECT_ID/beo.txt gs://$DEVSHELL_PROJECT_ID/khdb.txt gs://$DEVSHELL_PROJECT_ID/combined.txt
+Composing gs://qwiklabs-gcp-02-8288bf2664c0/combined.txt from 3 component object(s).
+```
+
+Lets try deleteing khdb.txt as all the combined files are put into it(but in the composed file was created after the all files got composed into khdb, we should have cat it a before deleted, lets cat combined.txt, anyways we dont have khdb so that's what we'll do now.)
+```                                                                                          
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$ gsutil ls gs://$DEVSHELL_PROJECT_ID/
+gs://qwiklabs-gcp-02-8288bf2664c0/beo.txt
+gs://qwiklabs-gcp-02-8288bf2664c0/bro.txt
+gs://qwiklabs-gcp-02-8288bf2664c0/combined.txt
+gs://qwiklabs-gcp-02-8288bf2664c0/khdb.txt
+gs://qwiklabs-gcp-02-8288bf2664c0/my-excellent-blog.png
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$ gsutil rm gs://$DEVSHELL_PROJECT_ID/khdb.txt                                                                                           
+Removing gs://qwiklabs-gcp-02-8288bf2664c0/khdb.txt...
+/ [1 objects]                                                                   
+Operation completed over 1 objects.                                              
+student_02_61105cf27e30@cloudshell:~ (qwiklabs-gcp-02-8288bf2664c0)$
+
+```
